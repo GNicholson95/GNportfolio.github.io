@@ -1,0 +1,254 @@
+/*======================================basic style=================================================*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+/*----------------------nav bar-----------------------*/
+ nav{
+     background: transparent;
+     padding: 5px 20px;
+     margin-bottom: 2rem;
+ }
+
+ ul{
+     list-style: none;
+ }
+
+ a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+   text-decoration: underline
+}
+
+ .menu li{
+     font-size: 20px;
+     padding: 15px 5px;
+     font-family: 'Nunito Sans', sans-serif;
+     font-weight: 400;
+     color: rgb(245, 245, 245);
+     white-space: nowrap;
+ }
+
+ .menu li a {
+    display: block;
+}
+
+
+/*======================================basic style=================================================*/
+ 
+  
+/*-------------mobile menu--------------*/
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: auto;
+    width: 50px;
+    display: inline-block;
+}
+
+.toggle{
+    order: 1;
+}
+
+.item.button{
+    order: 2;
+}
+
+ .item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+    opacity: 1;
+}
+
+.item a:hover{
+    color: rgb(251,170,1);
+    opacity: 1;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.item.active{
+    display: block;
+}
+
+
+
+/*---------------- Navbar Toggle ------------------*/
+
+.toggle{
+   cursor: pointer;
+}
+
+.bars{
+   background: rgb(0, 0, 0);
+   display: inline-block;
+   position: relative;
+   height: 2px;
+   width: 18px;
+}
+
+.bars::before,.bars::after{
+   background: rgb(2, 2, 2);
+   position: absolute;
+   content:"";
+   display: inline-block;
+   width: 18px;
+   height: 2px;
+}
+
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+/*--------------------hero-------------------*/
+
+.hero-img{
+    width: 35%;
+    height: auto;
+    }
+    
+    .hero{
+    text-align: center;
+    padding-top: 6%;
+    padding-bottom: 8%;
+    }
+
+    #sig{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+   
+   
+    /*--------------------main page-------------------*/
+.container{
+    display: block;
+    padding-left: 2rem;
+}
+
+.header{
+    padding-bottom: 2rem;
+}
+    .header h1{
+        font-size: 4rem;
+        display: inline;
+        text-align: left;
+        background: -webkit-linear-gradient(#000, #c58700, #000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+/*--------------------tablet view-------------------*/
+
+@media all and (min-width:468px){
+    .menu{
+        justify-content: space-between;
+    }
+
+   .logo{
+       margin-right: auto;
+   }
+
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    .toggle{
+        order: 2;
+    }
+
+    .button a{
+        padding: 7px 15px;
+        background: rgba(251, 170, 1, 1);
+        border: 1px solid rgba(251, 170, 1, 1);
+        border-radius: 45em;
+        text-decoration: none;
+        opacity: 1;
+        
+       }
+
+     .button a:hover{
+         transition: all .0.40;
+         border: 1px solid black;
+         background: rgb(192, 131, 0);
+         opacity: 1;
+         transition: 0.4s;
+     }
+
+
+    .header{
+        font-size: 2rem
+    }
+    
+}
+
+/*--------------------desktop-------------------*/
+
+@media all and (min-width:768px){
+    .item{
+    display: block;
+    width: auto;
+    }
+
+    .toggle{
+       /* display: none; */
+    }
+    .logo{
+        order: 0;
+        margin-right: auto;
+    }
+
+    .item.button{
+        margin-left: 0px;
+    }
+
+    .item{
+        order: 1;
+    }
+    .button{
+        order: 2;
+    }
+    
+    .menu{
+        justify-content: space-between;
+    }
+
+    .menu li{
+        padding: 15px 10px;
+    }
+
+    .menu li.button {
+        padding-right: 0;
+    }
+    
+    
+
+}
