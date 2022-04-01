@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' href="page1.css" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <title>GN Web</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+    $(function() {
+        $('.toggle').on('click',function(){
+            if($('.item').hasClass('active')){
+                $('.item').removeClass('active')
+            }
+            else{
+                $('.item').addClass('active')
+            }
+
+
+        })
+    });
+
+</script>
+
+</head>
+<body>
+<header>
+    <!----------------navbar--------------->
+    
+<nav>
+    <ul class='menu'>
+      <img class='logo' src='pageimg/George Nicholson Initials.svg'>
+      <li class='item'><a href="#">Home</a></li>
+      <li class='item'><a href="#">About</a></li>
+      <li class='item'><a href="#">Projects</a></li>
+      <li class='item button'><a href='mailto:ga.nicholson@outlook.com'>Contact</a></li>
+      <li class='toggle'><span class='bars'></span></li>
+    </ul>
+</nav>
+
+<!------------/navbar-------------->
+
+<main class='page'>
+    <div id='sig'>
+        <script 
+            src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+        </script>
+            <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_b3z6mzd6.json" background="transparent" speed="1" style="width: 55%; height: 55%;" loop controls autoplay></lottie-player>
+            </lottie-player>
+        </div>
+<section>
+    
+        <div class='container'>
+            <div class='header'>
+              <h1>About</h1>
+            </div>
+            <div>
+            <p></p>
+            </div>
+        </div>
+</section>
+    
+</main>
+
+
+    
+
+</header>
+
+
+
+</body>
+</html>
