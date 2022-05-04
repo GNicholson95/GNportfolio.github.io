@@ -1,11 +1,10 @@
-/*======================================basic style=================================================*/
 
+/*======================================basic style=================================================*/
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
 body{
@@ -19,7 +18,7 @@ body{
  nav{
      background: transparent;
      padding: 5px 20px;
-     margin-bottom: 2rem;
+    
  }
 
  ul{
@@ -46,6 +45,7 @@ a:hover{
  .menu li a {
     display: block;
 }
+
 
 
 /*======================================basic style=================================================*/
@@ -81,7 +81,7 @@ a:hover{
 }
 
 .item a:hover{
-    color: rgb(251,170,1);
+    color: rgb(251, 170, 1);
     opacity: 1;
     transition: 0.3s;
     text-decoration: none;
@@ -125,49 +125,137 @@ a:hover{
 
 /*--------------------hero-------------------*/
 
-.hero-img{
-    width: 35%;
-    height: auto;
-    }
-    
-    .hero{
-    text-align: center;
-    padding-top: 6%;
-    padding-bottom: 8%;
-    }
-
     #sig{
         display: flex;
         justify-content: center;
+        align-content: center;
         width: 100%;
-        height: auto;
+        height: 100%;
         margin: 0 auto;
+        border-bottom:10px solid #333;
+        border-top: 10px solid #333;
+        padding-top: 7.5rem;
+        padding-bottom: 7rem;
+        background-color:rgb(221, 221, 221);
     }
-   
-   
-    /*--------------------main page-------------------*/
-.container{
-    display: block;
-    padding-left: 2rem;
-}
 
-.header{
-    padding-bottom: 2rem;
-}
-    .header h1{
-        font-size: 4rem;
-        display: inline;
+    /*--------------------main page-------------------*/
+   
+
+    /*--------------------intro-------------------*/
+    .introduction{
         text-align: left;
+        margin: 0 auto;
+        max-width: 100%;
+        background-color: rgb(251, 170, 1);
+    }
+
+
+
+
+#About{
+    padding: 2rem 0 ;
+        font-size: 3rem;
+        font-weight: 600;
         background: -webkit-linear-gradient(#000, #c58700, #000);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-align: center;
     }
+
+
+.intro{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 2rem;
+        border-top: 10px solid #333;
+        border-bottom: 10px solid #333;
+}
+
+.card-1{
+    flex: 0 1 100%;
+    background: transparent;
+    border-radius: 16px;
+}
+
+.card-2{
+    flex: 0 1 100%;
+    background: rgb(221, 221, 221);
+    border-radius: 16px;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.card-2 p{
+    width: 100%;
+    height: auto;
+}
+
+.pic-me{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+     object-fit: cover;
+}
+
+/*--------------------/intro-------------------*/
+
+    .cards{
+        background: rgb(221, 221, 221);
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        
+    }
+
+    .card{
+        flex: 0 1 100%;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        padding: 1.5rem;
+        border-radius: 16px;
+        border: 2px solid rgb(0, 0, 0);
+        margin: 1rem 0rem;
+        text-align: center;
+    }
+    
+
+
+/*--------------------mobile view-------------------*/
+@media screen and (min-width: 375px) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+ 
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+
+    .card-1{
+        flex:0 1 calc(100% - 1em);
+    }
+    
+    .card-2{
+        flex: 0 1 calc(100% - 1em);
+    }
+    
+}
+
+
+/*--------------------/mobile view-------------------*/
 
 /*--------------------tablet view-------------------*/
 
-@media all and (min-width:468px){
+@media all and (min-width:768px){
     .menu{
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
    .logo{
@@ -187,18 +275,18 @@ a:hover{
 
     .button a{
         padding: 7px 15px;
-        background: rgba(251, 170, 1, 1);
-        border: 1px solid rgba(251, 170, 1, 1);
+        background: rgb(251, 170, 1);
+        border: 1px solid rgba(0,0,0);
         border-radius: 45em;
         text-decoration: none;
         opacity: 1;
-        
        }
 
      .button a:hover{
-         transition: all .0.40;
-         border: 1px solid black;
-         background: rgb(192, 131, 0);
+         color: rgb(251, 170, 1);
+         transition: all 0.40;
+         border: 1px solid rgb(251, 170, 1);
+         background: #333;
          opacity: 1;
          transition: 0.4s;
      }
@@ -207,19 +295,31 @@ a:hover{
     .header{
         font-size: 2rem
     }
-    
+
+    .card {
+        flex: 0 1 calc(25% - 1em);
+}
+
+.card-1{
+    flex:0 1 calc(40% - 1em);
+}
+
+.card-2{
+    flex: 0 1 calc(60% - 1em);
+}
+
 }
 
 /*--------------------desktop-------------------*/
 
-@media all and (min-width:768px){
+@media all and (min-width:1200px){
     .item{
     display: block;
     width: auto;
     }
 
     .toggle{
-       /* display: none; */
+       display: none;
     }
     .logo{
         order: 0;
@@ -238,7 +338,7 @@ a:hover{
     }
     
     .menu{
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .menu li{
@@ -249,6 +349,47 @@ a:hover{
         padding-right: 0;
     }
     
-    
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
 
+    
+    .card-1{
+        flex:0 1 calc(40% -1em);
+    }
+    .card-2{
+        flex: 0 1 calc(60% -1em);
+    }
+    
+}
+/*-----------------------------------footer---------------------------------------*/
+
+footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    height: 2.5rem;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #252525;
+}
+
+#foot {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    border-top:2px solid rgba(251, 170, 1, 1);
+    border-bottom:2px solid rgba(251, 170, 1, 1);
+}
+
+#foot:hover{
+    cursor: default;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
 }
