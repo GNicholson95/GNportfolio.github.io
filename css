@@ -90,6 +90,7 @@ a:hover{
     opacity: 1;
     transition: 0.3s;
     text-decoration: none;
+    transform: scale(1.05);
 }
 
 .item.active{
@@ -154,7 +155,7 @@ a:hover{
     align-content: center;
     flex-wrap: wrap;
     border-top:10px solid #333;
-    height: 40rem;
+    min-height: 39rem;
 }
 
 .card-logo{
@@ -196,9 +197,8 @@ span{
         justify-content: space-between;
         align-content: center;
         flex-wrap: wrap;
-        text-align: left;
         border-top: 10px solid #333;
-        height: 40rem;
+        min-height: 40rem;
     }
 
     
@@ -220,7 +220,7 @@ span{
     width: 100%;
     height: auto;
     object-fit: fill;
-    max-height: 39.5rem;
+    max-height: 36rem;
     max-width: auto;
     border-radius: 27% 48% 22% 70%;
 }
@@ -251,22 +251,19 @@ span{
         padding-top: 2rem;
 }
 
-.centered{
-    background: rgb(221, 221, 221);
-}
-
-
-
     .cards{
         display: flex;
         justify-content: space-between;
         align-content: center;
         flex-wrap: wrap;
-        height: 40rem;
+        background: rgb(221, 221, 221);
+        min-height: 37rem;
+        font-family: 'Nunito Sans', sans-serif;
+        padding-bottom: 2rem;
     }
 
     .card{
-        flex:0 1 100%;
+        flex:0 1 33%;
         font-size: 1.3rem;
         letter-spacing: 1px;
         border-radius: 16px;
@@ -281,6 +278,7 @@ span{
         color: #000;
         cursor: pointer;
         transition: 1s;
+        transform: scale(1.03);
     }
 
     .card p{
@@ -292,14 +290,155 @@ span{
         padding-top: 1rem;
     }
 
-    .card img{
+
+   .card img{
         width: 100%;
         height: auto;
         object-fit: cover;
-        border-radius:0 0 16px 16px;
     }
 
 /*--------------------/projects-------------------*/
+
+/*--------------------form-------------------*/
+.contact{
+    position: relative;
+    min-height: 40rem;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Nunito Sans', sans-serif;
+    border-top: 10px solid #333;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+font-size: 36px;
+font-weight: 500;
+background: -webkit-linear-gradient(#000, #c58700, #000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.contact .content p{
+    font-weight: 300;
+    color: #000;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #c58700;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: #c58700;
+    font-size: 12px;
+    transform:translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #c58700;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0);
+    border-radius: 16px;
+}
+
+.contactForm .inputBox input[type="submit"]:hover{
+color: #c58700;
+transition: all 0.40;
+border: 1px solid #c58700;
+background: #333;
+opacity: 1;
+transition: 0.4s;
+transform: scale(1.05);
+}
+
+
+/*--------------------/form-------------------*/
+
 
 /*-------------------------footer-----------------------------*/
 
@@ -337,18 +476,27 @@ footer{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        align-content: center;
+        gap: 0.5rem;
     }
  
     .card {
-        flex:0 1 calc(40% - 1em);
+        flex:0 1 calc(70% - 1em);
     }
 
     .card-1{
-        flex:0 1 calc(40% - 1em);
+        flex:0 1 calc(50% - 1em);
     }
     
     .card-2{
-        flex: 0 1 calc(60% - 1em);
+        flex: 0 1 calc(90% - 1em);
+    }
+
+    .about-me{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
     }
 
     .skills{
@@ -365,6 +513,26 @@ footer{
             flex:0 1 calc(90% - 1em);
         }
     
+}
+@media all and (max-width:375px){
+    .container .contactInfo{
+        width: 100%;
+    }
+}
+@media all and (max-width:900px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .contactForm{
+        min-width: 277px;
+    }
 }
 
 /*--------------------/mobile view-------------------*/
@@ -402,11 +570,11 @@ footer{
 
      .button a:hover{
          color: rgb(251, 170, 1);
-         transition: all 0.40;
+         transition: 0.4s;
          border: 1px solid rgb(251, 170, 1);
          background: #333;
          opacity: 1;
-         transition: 0.4s;
+         transform: scale(1.05);
      }
 
 
@@ -415,7 +583,7 @@ footer{
     }
 
     .card {
-        flex: 0 1 calc(33% - 1em);
+        flex: 0 1 calc(40% - 1em);
 }
 
 .card-1{
