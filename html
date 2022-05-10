@@ -7,7 +7,9 @@
     <link rel="stylesheet" type='text/css' href="page1.css" media="screen">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
     <title>GN Web</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -39,7 +41,7 @@
     <img id='Home' class='logo' src='pageimg/George Nicholson Initials copy.svg'>
       <li class='item'><a href="#Home">Home</a></li>
       <li class='item'><a href='#anch-about'>About</a></li>
-      <li class='item'><a href="#anchor-prj">Projects</a></li>
+      <li class='item'><a href="#projects">Projects</a></li>
       <li class='item button'><a href='mailto:ga.nicholson@outlook.com'>Contact</a></li>
       <li class='toggle'><span class='bars'></span></li>
     </ul>
@@ -112,34 +114,87 @@
     
 </section>       
       
-     <!-----cards----->
-     <h2 id='projects'>Projects</h2>
-<div id="anchor-prj" class="centered">
-    
+     <!-----projects----->
+     
+    <h2 id='projects'>Projects</h2>
     <section class="cards">
         
         <article class="card">
             <h3>Smiths Bespoke</h3>
-            <p>I made this website for a friend using code that i repurposed from a practice site.</p>
-            <img src="pageimg/Screenshot.png">
+            <p>I made this website for a friend using code that i repurposed from a practice site i had previously abandoned.</p>
+            <img src="pageimg/Screenshot1.png">
         </article>
 
         <article class="card">
-            <h3>headd</h3>
-            <p>I made this website for a friend using code that i repurposed from a practice site.</p>
+            <h3>Bootstrap page</h3>
+            <p>I made this website so i could put what i was learning through Bootstrap tutorials into practice.</p>
             <img src="pageimg/Screenshot.png">
         </article>
 
         <article class="card">
             <h3>My portfolio</h3>
             <p>This website was made using HTML, CSS, and a sprinkle of JavaScript to demonstrate my abilities.</p>
-            <img src="pageimg/Screenshot.png">
+            <img src="pageimg/Screenshot2.png">
         </article>
         
 </section>
-</div>
 
-     <!-----/cards----->
+
+     <!-----/projects----->
+
+
+     <!-----form----->
+     <section class="contact">
+         <div class="content">
+            <h2 >Contact me</h2>
+            <p>Please dont hesitate to contact me with any queries.</p>
+         </div>
+         <div class="container">
+             <div class="contactInfo">
+                 <div class="box">
+                         <div class="text">
+                             <h3>Address</h3>
+                             <p>45 Midland Avenue ,<br>Stapleford,<br>Nottingham</p>
+                         </div>
+                 </div>
+                 <div class="box">
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>07947-899-655</p>
+                        </div>
+                </div>
+                <div class="box">
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>ga.nicholson@outlook.com</p>
+                        </div>
+                </div>
+             </div>
+             <div class="contactForm">
+                 <form>
+                     <h2>Send Message</h2>
+                     <div class="inputBox">
+                         <input type="text" name="" required="required">
+                         <span>Full Name</span>
+                     </div>
+                     <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="send"
+                    </div>
+                 </form>
+             </div>
+         </div>
+     </section>
+
+      <!-----/form----->
+
 
 
 
