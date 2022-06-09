@@ -1,208 +1,700 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type='text/css' href="main.css" media="screen">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <title>GN Web</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
 
-    $(function() {
-        $('.toggle').on('click',function(){
-            if($('.item').hasClass('active')){
-                $('.item').removeClass('active')
-            }
-            else{
-                $('.item').addClass('active')
-            }
+/*======================================basic style=================================================*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #f6f6f6;
+}
+
+/*----------------------nav bar-----------------------*/
+ nav{
+     background: #f6f6f6;
+     padding: 5px 20px;
+     box-shadow: 0 1px 3px rgb(0 0 0 / 11%);
+ }
+
+ ul{
+     list-style: none;
+ }
+
+ a{
+    color: #023246;
+    text-decoration: none;
+}
+a:hover{
+   text-decoration: underline
+}
+
+ .menu li{
+     font-size: 20px;
+     padding: 15px 5px;
+     font-family: 'Nunito Sans', sans-serif;
+     font-weight: 400;
+     white-space: nowrap;
+ }
+
+ .menu li a {
+    display: block;
+}
+
+/*======================================basic style=================================================*/
+ 
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: auto;
+    width: 50px;
+    display: inline-block;
+}
+
+.toggle{
+    order: 1;
+}
+
+.item.button{
+    order: 2;
+}
+
+ .item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+    opacity: 1;
+}
+
+.item a:hover{
+    color: #287094;
+    opacity: 1;
+    transition: 0.3s;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.item.active{
+    display: block;
+}
 
 
-        })
-    });
+.head-1{
+    background: -webkit-linear-gradient(#023246,#287094);
+    -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+        font-size: 2.5rem;
+}
 
-</script>
+/*---------------- Navbar Toggle ------------------*/
 
-</head>
-<body>
-    <div id="page-container">
-        
-<header>
-    <!----------------navbar--------------->
+.toggle{
+   cursor: pointer;
+}
+
+.bars{
+   background: #023246;
+   display: inline-block;
+   position: relative;
+   height: 2px;
+   width: 18px;
+}
+
+.bars::before,.bars::after{
+   background: #023246;
+   position: absolute;
+   content:"";
+   display: inline-block;
+   width: 18px;
+   height: 2px;
+}
+
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+/*--------------------hero-------------------*/
+
+    #sig{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+       min-height: 100vh;
+       background: -webkit-linear-gradient(#023246,#287094);
+       
+    }
+/*--------------------/hero-------------------*/
+
+/*---------------------------------main page--------------------------------*/
+
+    /*--------------------skills-------------------*/
+.skills{
+    background: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    min-height: 39rem;
+}
+
+.card-logo{
+    flex:0 1 calc(25% - 1em);
+        margin: 1rem 0;
+        align-self: center;
+}
+
+.card-logo img{
+    width: 100%;
+    height: auto;
+}
+
+.card-skills{
+flex:0 1 calc(60% - 1em);
+font-size: 1.2rem;
+font-family: 'Nunito Sans', sans-serif;
+letter-spacing: 0.5px;
+padding: 1.5rem;
+}
+
+.head-1{
+    padding-left: 1rem;
+    background: -webkit-linear-gradient(#023246,#287094);
+    -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+        font-size: 2.5rem;
+}
+.card-skills p{
+    padding: 1rem;
+    font-weight: 300;
+    color: #287094;
+}
+
+span{
+    font-weight: 600;
+    color: #023246;
+}
+    /*--------------------/skills-------------------*/
+
+    /*--------------------about me-------------------*/
+    .about-me{
+        display: flex;
+        background-color: #287094;
+        background: -webkit-linear-gradient(#023246,#287094);
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        min-height: 40rem;
+    }
+
     
-<nav>
-    <ul class='menu'>
-    <img id='Home' class='logo' src='pageimg/George Nicholson Initials copy.svg'>
-      <li class='item'><a href="#Home">Home</a></li>
-      <li class='item'><a href='#anch-about'>About</a></li>
-      <li class='item'><a href="#projects">Projects</a></li>
-      <li class='item button'><a href='mailto:ga.nicholson@outlook.com'>Contact</a></li>
-      <li class='toggle'><span class='bars'></span></li>
-    </ul>
-</nav>
-</header>
-<!------------/navbar-------------->
-/
-<!------------animated hero-------------->
-
-<div id='sig'>
-    <script 
-        src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
-    </script>
-        <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_b3z6mzd6.json" background="transparent" speed="1" style="width: 65%; height: 65%;"  autoplay></lottie-player>
-        </lottie-player>
- </div>  
-
-<!------------/animated hero-------------->
-
-<!------------page content-------------->
-
-<section class="skills">
-  
-    <div class="card-logo">
-        <img src="pageimg/HTML5-logo.svg">
-    </div>
-    <div class="card-logo">
-        <img src="pageimg/CSS3_logo.svg">
-    </div>
-    <div class="card-logo">
-        <img src="pageimg/JavaScript-logo.svg">
-    </div>
-  
-
-   
-    <div class="card-skills">
-        <h2 id="head">The basics</h2>
-        <p>
-            <span>HTML 5</span>: I have a good understanding of HTML and im alway keeping an eye out for mor semantic ways to code.
-        </p>
-        <p>
-            <span>CSS 3</span>: My knowledge of basic css is good, and i understand the basic modern practices of css including flex and grid.
-        </p>
-        <p>
-            <span>Java Script</span>: I have completed codecademys Learn JavaScript course and im looking to expand my basic knowledge on it.
-        </p>
-    </div>
+.head-2{
+    font-weight: 600;
+        font-size: 2.5rem;
+        color: #f6f6f6;
+        text-align: center;
+    }
 
 
-</section>
+.card-1{
+    flex:0 1 calc(40% - 1em);
+    background: transparent;
+    align-self: center;
+    padding: 1.5rem;
+}
+
+.card-1 img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    max-height: 36rem;
+    max-width: auto;
+    border-radius: 100%;
+    border: none;
+}
+
+.card-2{
+    flex:0 1 calc(60% - 1em);
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 1.5rem;
+    align-self: center;
+}
+.card-2 p{
+    padding: 1rem;
+    color: #f6f6f6;
+    font-weight: 200;
+}
+/*--------------------/about me-------------------*/
+
+/*--------------------projects-------------------*/
+.head-3{
+    font-size: 2.5rem;
+        font-weight: 600;
+        background: -webkit-linear-gradient(#023246,#287094);
+    -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    padding-top: 2rem;
+}
+    .cards{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        background: #f6f6f6;
+        min-height: 39rem;
+        font-family: 'Nunito Sans', sans-serif;
+        padding-bottom: 2rem;
+    }
+
+    .card{
+        flex:0 1 33%;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        border-radius: 20px;
+        border: 2px solid #287094;
+        text-align: center;
+        background: -webkit-linear-gradient(#023246,#287094);
+        color: #f6f6f6;
+    }
+
+    .card:hover{
+        background: -webkit-linear-gradient(#023246,#287094);
+        color: #f6f6f6;
+        cursor: pointer;
+        transition: 1s;
+        transform: scale(1.03);
+    }
+
+    .card p{
+        padding: 1rem;
+        font-weight: lighter;
+    }
+
+    .card h3{
+        padding-top: 1rem;
+    }
 
 
+   .card img{
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+        padding: 0.2rem;
+        border: 2px solid #f6f6f6;
+        border-radius: 20px;
+        background-color: #d4d4ce;
+
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+/*--------------------/projects-------------------*/
+
+/*--------------------form-------------------*/
+.contact{
+    position: relative;
+    min-height: 40rem;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Nunito Sans', sans-serif;
+    background: -webkit-linear-gradient(#023246,#287094);
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+font-size: 36px;
+font-weight: 600;
+color: #f6f6f6;
+}
+.contact .content p{
+    font-weight: 300;
+    color: #f6f6f6;
+    padding: 2rem 0;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #f6f6f6;
+    flex-direction: column;
+    font-weight: 300;
+}
 
 
- <section id="anch-about" class="about-me">   
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #f6f6f6;
+}
 
-        <div class="card-1">
-        <img class="pic-me" src="pageimg/PHOTO-ME.jpg">
-        </div>
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
 
-        <div class="card-2">
-            <h2 id='About'>About</h2>
+.contactForm h2{
+    font-size: 30px;
+    color: #023246;
+    font-weight: 500;
+}
 
-        <p>
-            Hi im George, im a self taught front end developer exited to start a career in web development.
-            I have a working knowledge of HTML,CSS, and im expanding my basic understanding of javascript.
-            I pride myself on my ability to go beyond my comfort zone and learn new skills.
-            </p>
-        </div>
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #023246;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: #287094;
+    font-size: 12px;
+    transform:translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #023246;
+    color: #f6f6f6;
+    border: 1px solid #287094;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.contactForm .inputBox input[type="submit"]:hover{
+color: #f6f6f6;
+transition: all 0.40;
+border: 1px solid #023246;
+background: #287094;
+opacity: 1;
+transition: 0.4s;
+transform: scale(1.05);
+}
+
+
+/*--------------------/form-------------------*/
+
+
+/*-------------------------footer-----------------------------*/
+
+footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #333;
+}
+
+#foot {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: #f6f6f6;
+    border-top:2px solid #287094;
+    border-bottom:2px solid #287094;
+}
+
+#foot:hover{
+    cursor: default;
+}
+/*-------------------------/footer-----------------------------*/
+
+/*---------------------------------/main page--------------------------------*/
+
+/*--------------------mobile view-------------------*/
+@media screen and (min-width: 375px) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        gap: 0.5rem;
+    }
+ 
+    .card {
+        flex:0 1 calc(70% - 1em);
+    }
+
+    .card-1{
+        flex:0 1 calc(50% - 1em);
+    }
     
-</section>       
-      
-     <!-----projects----->
-     
-    <h2 id='projects'>Projects</h2>
-    <section class="cards">
-        
-        <article class="card">
-            <h3>Smiths Bespoke</h3>
-            <p>I made this website for a friend using code that i repurposed from a practice site i had previously abandoned.</p>
-            <img src="pageimg/Screenshot1.png">
-        </article>
+    .card-2{
+        flex: 0 1 calc(90% - 1em);
+    }
 
-        <article class="card">
-            <h3>Bootstrap page</h3>
-            <p>I made this website so i could put what i was learning through Bootstrap tutorials into practice.</p>
-            <img src="pageimg/Screenshot.png">
-        </article>
+    .about-me{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+    }
 
-        <article class="card">
-            <h3>My portfolio</h3>
-            <p>This website was made using HTML, CSS, and a sprinkle of JavaScript to demonstrate my abilities.</p>
-            <img src="pageimg/Screenshot2.png">
-        </article>
-        
-</section>
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .card-logo{
+        flex:0 1 calc(30% - 1em);
+        }
+
+        .card-skills{
+            flex:0 1 calc(90% - 1em);
+        }
+
+        #sig{
+            width: 100%;
+            height: 100vh;
+        }
+
+        #projects{
+            padding: 2rem 0;
+        }
+    
+}
+@media all and (max-width:375px){
+    .container .contactInfo{
+        width: 100%;
+    }
+}
+@media all and (max-width:900px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .contactForm{
+        min-width: 277px;
+    }
+}
+
+/*--------------------/mobile view-------------------*/
+
+/*--------------------tablet view-------------------*/
+
+@media all and (min-width:768px){
+    .menu{
+        justify-content: space-evenly;
+    }
+
+   .logo{
+       margin-right: auto;
+   }
+
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    .toggle{
+        order: 2;
+    }
+
+    .button a{
+        padding: 7px 15px;
+
+        background: #287094;
+        color: #f6f6f6;
+        border: 1px solid #023246;
+        border-radius: 45em;
+        text-decoration: none;
+        opacity: 1;
+       }
+
+     .button a:hover{
+         background: #023246;
+         color: #f6f6f6;
+         transition: 0.4s;
+         border: 1px solid #287094;
+         color: #f6f6f6;
+         opacity: 1;
+         transform: scale(1.05);
+     }
+
+     #sig{
+        width: 100%;
+        height: 100vh;
+    }
 
 
-     <!-----/projects----->
+    .header{
+        font-size: 2rem
+    }
 
+    .card {
+        flex: 0 1 calc(40% - 1em);
+}
 
-     <!-----form----->
-     <section class="contact">
-         <div class="content">
-            <h2 >Contact me</h2>
-            <p>If you've made it this far down please feel free to drop me a email using the contact button or form below.</p>
-         </div>
-         <div class="container">
-             <div class="contactInfo">
-                 <div class="box">
-                         <div class="text">
-                             <h3>Address</h3>
-                             <p>45 Midland Avenue ,<br>Stapleford,<br>Nottingham</p>
-                         </div>
-                 </div>
-                 <div class="box">
-                        <div class="text">
-                            <h3>Phone</h3>
-                            <p>07947-899-655</p>
-                        </div>
-                </div>
-                <div class="box">
-                        <div class="text">
-                            <h3>Email</h3>
-                            <p>ga.nicholson@outlook.com</p>
-                        </div>
-                </div>
-             </div>
-             <div class="contactForm">
-                 <form>
-                     <h2>Send Message</h2>
-                     <div class="inputBox">
-                         <input type="text" name="" required="required">
-                         <span>Full Name</span>
-                     </div>
-                     <div class="inputBox">
-                        <input type="text" name="" required="required">
-                        <span>Email</span>
-                    </div>
-                    <div class="inputBox">
-                        <textarea required="required"></textarea>
-                        <span>Type your Message...</span>
-                    </div>
-                    <div class="inputBox">
-                        <input type="submit" name="" value="send"
-                    </div>
-                 </form>
-             </div>
-         </div>
-     </section>
+.card-1{
+    flex:0 1 calc(40% - 1em);
+   /* min-width: 401px;
+    min-height: auto; */
+}
 
-      <!-----/form----->
+.card-2{
+    flex: 0 1 calc(60% - 1em);
+}
 
+.card-logo{
+flex:0 1 calc(25% - 1em);
+}
 
+.card-skills{
+    flex:0 1 calc(90% - 1em);
+}
 
+}
+/*--------------------/tablet view-------------------*/
+/*--------------------desktop-------------------*/
 
+@media all and (min-width:1200px){
+    .item{
+    display: block;
+    width: auto;
+    }
 
-<!------------/page content-------------->
+    .toggle{
+       display: none;
+    }
+    .logo{
+        order: 0;
+        margin-right: auto;
+    }
 
+    .item.button{
+        margin-left: 0px;
+    }
 
-<footer><h3 id="foot">Created By: George Nicholson</h3></footer>
-    </div>
-</body>
-</html>
+    .item{
+        order: 1;
+    }
+    .button{
+        order: 2;
+    }
+    
+    .menu{
+        justify-content: space-evenly;
+    }
+
+    .menu li{
+        padding: 15px 10px;
+    }
+
+    .menu li.button {
+        padding-right: 0;
+    }
+
+    #sig{
+        width: 100%;
+        height: 100%;
+    }
+    #projects{
+        padding: 2rem 0 0 0;
+    }
+    
+    .card {
+        flex: 0 1 calc(33% - 1em);
+    }
+
+    
+    .card-1{
+        flex:0 1 calc(40% -1em);
+    }
+
+    .card-2{
+        flex: 0 1 calc(60% -1em);
+    }
+    
+    .card-logo{
+        flex:0 1 calc(13% - 1em);
+    }
+
+    .card-skills{
+        flex:0 1 calc(60% - 1em);
+    }
+
+}
+/*--------------------/desktop-------------------*/
+
