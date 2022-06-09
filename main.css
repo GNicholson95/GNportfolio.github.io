@@ -266,7 +266,7 @@ span{
         border: 2px solid #fb8cab;
         text-align: center;
         background: -webkit-linear-gradient(#360167,#cf268a);
-        color: #f6f6f6;
+        color: #e9def9;
         min-width: 45%;
     }
 
@@ -275,7 +275,10 @@ span{
         transition: 1s;
         transform: scale(1.03);
     }
-
+    
+    .card a:hover{
+        text-decoration: none;
+    }
     .card p{
         padding: 2rem;
         font-weight: lighter;
