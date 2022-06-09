@@ -9,14 +9,20 @@
 
 body{
     font-family: sans-serif;
-    background-color: #f6f6f6;
+    background: -webkit-linear-gradient(#360167,#af1281,#cf268a,#fb8cab);
 }
 
+/*----------------------top page-----------------------*/
+/*.top-page{
+    background: -webkit-linear-gradient(#1a0635,#360167,#af1281,#cf268a);
+    min-height: 100vh;
+    width: 100%;
+}*/
+/*----------------------top page-----------------------*/
 /*----------------------nav bar-----------------------*/
  nav{
-     background: #f6f6f6;
+     background: transparent;
      padding: 5px 20px;
-     box-shadow: 0 1px 3px rgb(0 0 0 / 11%);
  }
 
  ul{
@@ -24,7 +30,7 @@ body{
  }
 
  a{
-    color: #023246;
+    color: #e9def9;
     text-decoration: none;
 }
 a:hover{
@@ -74,7 +80,7 @@ a:hover{
 }
 
 .item a:hover{
-    color: #287094;
+    color: #fb8cab;
     opacity: 1;
     transition: 0.3s;
     text-decoration: none;
@@ -85,15 +91,6 @@ a:hover{
     display: block;
 }
 
-
-.head-1{
-    background: -webkit-linear-gradient(#023246,#287094);
-    -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 600;
-        font-size: 2.5rem;
-}
-
 /*---------------- Navbar Toggle ------------------*/
 
 .toggle{
@@ -101,7 +98,7 @@ a:hover{
 }
 
 .bars{
-   background: #023246;
+   background: #cf268a;
    display: inline-block;
    position: relative;
    height: 2px;
@@ -109,7 +106,7 @@ a:hover{
 }
 
 .bars::before,.bars::after{
-   background: #023246;
+   background: #cf268a;
    position: absolute;
    content:"";
    display: inline-block;
@@ -133,9 +130,8 @@ a:hover{
         width: 100%;
         padding-top: 7rem;
         padding-bottom: 7rem;
-       min-height: 100vh;
-       background: -webkit-linear-gradient(#023246,#287094);
-       
+        height: 100vh;
+        margin-bottom: 2rem;
     }
 /*--------------------/hero-------------------*/
 
@@ -143,12 +139,11 @@ a:hover{
 
     /*--------------------skills-------------------*/
 .skills{
-    background: #f6f6f6;
     display: flex;
     justify-content: space-between;
     align-content: center;
     flex-wrap: wrap;
-    min-height: 39rem;
+    min-height: 50rem;
 }
 
 .card-logo{
@@ -172,40 +167,36 @@ padding: 1.5rem;
 
 .head-1{
     padding-left: 1rem;
-    background: -webkit-linear-gradient(#023246,#287094);
-    -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    color: #360167;
         font-weight: 600;
         font-size: 2.5rem;
 }
 .card-skills p{
     padding: 1rem;
     font-weight: 300;
-    color: #287094;
+    color: #e9def9;
 }
 
 span{
     font-weight: 600;
-    color: #023246;
+    color: #360167;
 }
     /*--------------------/skills-------------------*/
 
     /*--------------------about me-------------------*/
     .about-me{
         display: flex;
-        background-color: #287094;
-        background: -webkit-linear-gradient(#023246,#287094);
         justify-content: space-between;
         align-content: center;
         flex-wrap: wrap;
-        min-height: 40rem;
+        min-height: 50rem;
     }
 
     
 .head-2{
     font-weight: 600;
         font-size: 2.5rem;
-        color: #f6f6f6;
+        color:  #360167;
         text-align: center;
     }
 
@@ -237,58 +228,63 @@ span{
 }
 .card-2 p{
     padding: 1rem;
-    color: #f6f6f6;
+    color: #e9def9;
     font-weight: 200;
 }
 /*--------------------/about me-------------------*/
 
 /*--------------------projects-------------------*/
+
+
+.project-section{
+    min-height: 50rem;
+}
+
 .head-3{
     font-size: 2.5rem;
         font-weight: 600;
-        background: -webkit-linear-gradient(#023246,#287094);
-    -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color:  #360167;
         text-align: center;
-    padding-top: 2rem;
+        padding: 2rem;
+        margin: 3rem;
 }
     .cards{
         display: flex;
         justify-content: space-between;
         align-content: center;
         flex-wrap: wrap;
-        background: #f6f6f6;
-        min-height: 39rem;
         font-family: 'Nunito Sans', sans-serif;
         padding-bottom: 2rem;
+        margin-top: 1rem;
     }
 
     .card{
-        flex:0 1 33%;
+        flex:0 1 49%;
         font-size: 1.3rem;
         letter-spacing: 1px;
         border-radius: 20px;
-        border: 2px solid #287094;
+        border: 2px solid #fb8cab;
         text-align: center;
-        background: -webkit-linear-gradient(#023246,#287094);
+        background: -webkit-linear-gradient(#360167,#cf268a);
         color: #f6f6f6;
+        min-width: 45%;
     }
 
     .card:hover{
-        background: -webkit-linear-gradient(#023246,#287094);
-        color: #f6f6f6;
         cursor: pointer;
         transition: 1s;
         transform: scale(1.03);
     }
 
     .card p{
-        padding: 1rem;
+        padding: 2rem;
         font-weight: lighter;
+        color: #fff;
     }
 
     .card h3{
-        padding-top: 1rem;
+        padding-top: 2rem;
+        color: #fff;
     }
 
 
@@ -297,11 +293,7 @@ span{
         height: auto;
         object-fit: cover;
         padding: 0.2rem;
-        border: 2px solid #f6f6f6;
         border-radius: 20px;
-        background-color: #d4d4ce;
-
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
 /*--------------------/projects-------------------*/
@@ -316,7 +308,7 @@ span{
     align-items: center;
     flex-direction: column;
     font-family: 'Nunito Sans', sans-serif;
-    background: -webkit-linear-gradient(#023246,#287094);
+    background: -webkit-linear-gradient(#000);
 }
 
 .contact .content{
@@ -327,11 +319,11 @@ span{
 .contact .content h2{
 font-size: 36px;
 font-weight: 600;
-color: #f6f6f6;
+color: #fff;
 }
 .contact .content p{
     font-weight: 300;
-    color: #f6f6f6;
+    color: #fff;
     padding: 2rem 0;
 }
 
@@ -359,7 +351,7 @@ color: #f6f6f6;
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: #f6f6f6;
+    color: #fff;
     flex-direction: column;
     font-weight: 300;
 }
@@ -367,7 +359,7 @@ color: #f6f6f6;
 
 .container .contactInfo .box .text h3{
     font-weight: 500;
-    color: #f6f6f6;
+    color: #fff;
 }
 
 .contactForm{
@@ -378,7 +370,7 @@ color: #f6f6f6;
 
 .contactForm h2{
     font-size: 30px;
-    color: #023246;
+    color: #360167;
     font-weight: 500;
 }
 
@@ -408,13 +400,13 @@ color: #f6f6f6;
     margin: 10px 0;
     pointer-events: none;
     transition: 0.5s;
-    color: #023246;
+    color: #360167;
 }
 .contactForm .inputBox input:focus ~ span,
 .contactForm .inputBox input:valid ~ span,
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span{
-    color: #287094;
+    color: #cf268a;
     font-size: 12px;
     transform:translateY(-20px);
 }
@@ -422,9 +414,9 @@ color: #f6f6f6;
 .contactForm .inputBox input[type="submit"]
 {
     width: 100px;
-    background: #023246;
-    color: #f6f6f6;
-    border: 1px solid #287094;
+    background: #cf268a;
+    color: #fff;
+    border: 1px solid #1a0635;
     border-radius: 16px;
     cursor: pointer;
     padding: 10px;
@@ -434,8 +426,8 @@ color: #f6f6f6;
 .contactForm .inputBox input[type="submit"]:hover{
 color: #f6f6f6;
 transition: all 0.40;
-border: 1px solid #023246;
-background: #287094;
+border: 1px solid #cf268a;
+background: #fb8cab;
 opacity: 1;
 transition: 0.4s;
 transform: scale(1.05);
@@ -456,15 +448,15 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 30px 10%;
-    background-color: #333;
+    background-color: #1a0635;
 }
 
 #foot {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
-    color: #f6f6f6;
-    border-top:2px solid #287094;
-    border-bottom:2px solid #287094;
+    color: #fff;
+    border-top:2px solid #cf268a;
+    border-bottom:2px solid #cf268a;
 }
 
 #foot:hover{
@@ -575,20 +567,20 @@ footer{
     .button a{
         padding: 7px 15px;
 
-        background: #287094;
+        background: #af1281;
         color: #f6f6f6;
-        border: 1px solid #023246;
+        border: 1px solid #fb8cab;
         border-radius: 45em;
         text-decoration: none;
         opacity: 1;
        }
 
      .button a:hover{
-         background: #023246;
-         color: #f6f6f6;
+         background: #1a0635;
+         color: #fb8cab;
          transition: 0.4s;
-         border: 1px solid #287094;
-         color: #f6f6f6;
+         border: 1px solid #cf268a;
+         color: #fb8cab;
          opacity: 1;
          transform: scale(1.05);
      }
