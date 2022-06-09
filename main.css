@@ -12,19 +12,11 @@ body{
     background-color: #f6f6f6;
 }
 
-#page-container {
-    position: relative;
-    min-height: 100vh;
-
-}
-
-
-
 /*----------------------nav bar-----------------------*/
  nav{
      background: #f6f6f6;
      padding: 5px 20px;
-    
+     box-shadow: 0 1px 3px rgb(0 0 0 / 11%);
  }
 
  ul{
@@ -51,12 +43,8 @@ a:hover{
     display: block;
 }
 
-
-
 /*======================================basic style=================================================*/
  
-  
-/*-------------mobile menu--------------*/
 .menu{
     display: flex;
     flex-wrap: wrap;
@@ -97,6 +85,15 @@ a:hover{
     display: block;
 }
 
+
+.head-1{
+    background: -webkit-linear-gradient(#023246,#287094);
+    -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+        font-size: 2.5rem;
+}
+
 /*---------------- Navbar Toggle ------------------*/
 
 .toggle{
@@ -134,12 +131,11 @@ a:hover{
         justify-content: center;
         align-content: center;
         width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        border-top: 10px solid #d4d4ce;
-        padding-top: 7.5rem;
+        padding-top: 7rem;
         padding-bottom: 7rem;
-        background: -webkit-linear-gradient(#023246,#287094);
+       min-height: 100vh;
+       background: -webkit-linear-gradient(#023246,#287094);
+       
     }
 /*--------------------/hero-------------------*/
 
@@ -152,7 +148,6 @@ a:hover{
     justify-content: space-between;
     align-content: center;
     flex-wrap: wrap;
-    border-top:10px solid #d4d4ce;
     min-height: 39rem;
 }
 
@@ -175,13 +170,13 @@ letter-spacing: 0.5px;
 padding: 1.5rem;
 }
 
-.card-skills h2{
+.head-1{
     padding-left: 1rem;
     background: -webkit-linear-gradient(#023246,#287094);
     -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 2.5rem;
 }
 .card-skills p{
     padding: 1rem;
@@ -203,14 +198,13 @@ span{
         justify-content: space-between;
         align-content: center;
         flex-wrap: wrap;
-        border-top: 10px solid #d4d4ce;
         min-height: 40rem;
     }
 
     
-#About{
-        font-size: 2rem;
-        font-weight: 600;
+.head-2{
+    font-weight: 600;
+        font-size: 2.5rem;
         color: #f6f6f6;
         text-align: center;
     }
@@ -249,17 +243,15 @@ span{
 /*--------------------/about me-------------------*/
 
 /*--------------------projects-------------------*/
-#projects{
-    font-size: 2rem;
+.head-3{
+    font-size: 2.5rem;
         font-weight: 600;
         background: -webkit-linear-gradient(#023246,#287094);
     -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
-        border-top: 10px solid #d4d4ce;
     padding-top: 2rem;
 }
-
     .cards{
         display: flex;
         justify-content: space-between;
@@ -324,8 +316,6 @@ span{
     align-items: center;
     flex-direction: column;
     font-family: 'Nunito Sans', sans-serif;
-    border-top: 10px solid #d4d4ce;
-    border-bottom: 10px solid #d4d4ce;
     background: -webkit-linear-gradient(#023246,#287094);
 }
 
