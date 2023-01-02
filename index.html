@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type='text/css' href="main.css" media="screen">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>GN Web</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -22,8 +25,6 @@
             else{
                 $('.item').addClass('active')
             }
-
-
         })
     });
 
@@ -40,7 +41,7 @@
       <li class='item'><a href="#Home">Home</a></li>
       <li class='item'><a href='#anch-about'>About</a></li>
       <li class='item'><a href="#projects">Projects</a></li>
-      <li class='item button'><a href='mailto:ga.nicholson@outlook.com'>Contact</a></li>
+      <li class='item button'><a href="https://mailchi.mp/9d7324e284e0/georgedev" target="_blank">Contact</a></li>
       <li class='toggle'><span class='bars'></span></li>
     </ul>
 </nav>
@@ -73,7 +74,7 @@
 
    
     <div class="card-skills">
-        <h2 class="head-1">The basics</h2>
+        <h2 class="head-1 animate__animated animate__fadeInRight">The basics</h2>
         <p>
             <span>HTML 5</span>: I have a good understanding of HTML and im alway keeping an eye out for mor semantic ways to code.
         </p>
@@ -95,7 +96,7 @@
  <section id="anch-about" class="about-me">   
 
         <div class="card-2">
-            <h2 class="head-2" id='About'>About me</h2>
+            <h2 class="head-2 animate__animated animate__fadeInLeft" id='About'>About me</h2>
 
         <p>
             Hi im George, im a self taught front end developer exited to start a career in web development.
@@ -112,7 +113,7 @@
       
      <!-----projects----->
      <div class='project-section' id='projects'>
-     <h2 class='head-3' id='projects'>My projects</h2>
+     <h2 class='head-3 animate__animated animate__zoomIn' id='projects'>My projects</h2>
     <section class="cards">
         
         
@@ -129,6 +130,13 @@
             <p>This website was made using HTML, CSS, and a touch of JavaScript to demonstrate my abilities.</p>
             <img src="pageimg/Screenshot-2.jpg" alt="image of portfolio">
         </article>
+
+        <article class="card">
+            <a href="https://gnicholson95.github.io/Another-boring-to-do-list... /" target="_blank">
+            <h3>Another boring to do list...</h3>
+            <p>Every portfolio has to have one... made to show use of javascript functions and event listener ect.</p>
+            <img src="pageimg/todolist.png" alt="image of portfolio">
+        </article>
 </section>
 </div>
 
@@ -138,7 +146,7 @@
      <!-----form----->
      <section class="contact">
          <div class="content">
-            <h2 >Contact me</h2>
+            <h2 class="animate__animated animate__bounce">Contact me</h2>
             <p>If you've made it this far down please feel free to drop me a email using the contact button or form below.</p>
          </div>
          <div class="container">
@@ -172,7 +180,7 @@
                         <span>Type your Message...</span>
                     </div>
                     <div class="inputBox">
-                        <input type="submit" name="" value="send">
+                       <input type="submit" name="" value="send">
                     </div>
                  </form>
              </div>
@@ -189,5 +197,6 @@
 
 
 <footer><h3 id="foot">Created By: George Nicholson</h3></footer>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
